@@ -1,0 +1,252 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+
+}
+
+
+
+body{
+
+    background:#f4f7fb;
+
+}
+
+
+
+
+/* Header */
+
+.header{
+
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px;
+
+}
+
+
+
+.header h1{
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.header h2{
+
+    font-size:22px;
+
+}
+
+
+
+.header p{
+
+    font-size:18px;
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+/* Sections */
+
+
+.about,
+.skills,
+.projects,
+.contact{
+
+
+    margin:30px;
+
+    padding:35px;
+
+    background:white;
+
+    border:2px solid #ddd;
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+h2{
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+.about p{
+
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+/* Cards */
+
+
+.skill-container,
+.project-container{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+
+.card{
+
+
+    width:250px;
+
+    padding:25px;
+
+    background:#eef2ff;
+
+    border:2px solid #6366f1;
+
+    border-radius:15px;
+
+    text-align:center;
+
+
+}
+
+
+
+
+.card h3{
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+.card:hover{
+
+
+    transform:translateY(-10px);
+
+    background:#dbeafe;
+
+
+}
+
+
+
+
+/* Contact */
+
+
+.contact{
+
+    background:#ecfdf5;
+
+}
+
+
+
+.contact-box{
+
+    text-align:center;
+
+}
+
+
+
+.contact-box p{
+
+
+    font-size:18px;
+
+    margin:15px;
+
+
+}
+
+
+
+.contact-box i{
+
+
+    font-size:25px;
+
+    margin-right:10px;
+
+
+}
+
+
+
+
+
+
+/* Footer */
+
+
+footer{
+
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+
+}
