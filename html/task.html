@@ -1,0 +1,237 @@
+import os
+from weasyprint import HTML
+
+# Create HTML content for Updated Portfolio PDF
+html_portfolio = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background-color: #f8fafc;
+        color: #334155;
+        line-height: 1.6;
+        font-size: 10.5pt;
+    }
+    .header {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        color: white;
+        padding: 40px 45px 35px 45px;
+        position: relative;
+    }
+    .header-content {
+        max-width: 100%;
+    }
+    .name {
+        font-size: 26pt;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 0 0 6px 0;
+        color: #ffffff;
+    }
+    .title {
+        font-size: 12pt;
+        color: #38bdf8;
+        font-weight: 500;
+        margin: 0 0 15px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .university {
+        font-size: 11pt;
+        color: #cbd5e1;
+        margin-bottom: 20px;
+    }
+    .contact-bar {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 10px 18px;
+        border-radius: 6px;
+        font-size: 9.5pt;
+        color: #e2e8f0;
+    }
+    .contact-item {
+        display: inline-block;
+        margin-right: 25px;
+    }
+    .container {
+        padding: 35px 45px;
+    }
+    .section-title {
+        font-size: 13pt;
+        font-weight: 700;
+        color: #0f172a;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        margin-top: 0;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #e2e8f0;
+        position: relative;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: #0284c7;
+    }
+    .section {
+        margin-bottom: 25px;
+    }
+    .about-text {
+        color: #475569;
+        text-align: justify;
+        margin-top: 0;
+    }
+    .education-card {
+        background-color: #ffffff;
+        border-left: 4px solid #0284c7;
+        padding: 14px 18px;
+        border-radius: 0 6px 6px 0;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .degree {
+        font-weight: 700;
+        font-size: 11pt;
+        color: #0f172a;
+    }
+    .institution {
+        color: #64748b;
+        font-size: 10pt;
+    }
+    .grid-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .grid-cell {
+        width: 50%;
+        vertical-align: top;
+        padding-right: 15px;
+    }
+    .grid-cell:last-child {
+        padding-right: 0;
+        padding-left: 15px;
+    }
+    .pills {
+        margin-top: 5px;
+    }
+    .pill {
+        display: inline-block;
+        background-color: #e0f2fe;
+        color: #0369a1;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 9.5pt;
+        font-weight: 500;
+        margin-right: 6px;
+        margin-bottom: 8px;
+    }
+    .strength-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .strength-list li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 8px;
+        color: #334155;
+    }
+    .strength-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #0284c7;
+        font-weight: bold;
+    }
+    .objective-box {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        padding: 16px 20px;
+        border-radius: 8px;
+        color: #475569;
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-content">
+        <h1 class="name">Azeesha Naveed</h1>
+        <div class="title">Student & Aspiring Developer</div>
+        <div class="university">BS Computer Engineering Technology | International Islamic University Islamabad</div>
+        <div class="contact-bar">
+            <span class="contact-item"><b>Email:</b> azeeshanaveed299@gmail.com</span>
+            <span class="contact-item"><b>LinkedIn:</b> https://www.linkedin.com/in/azeesha-naveed-19946a406?utm_source=share_via&utm_content=profile&utm_medium=member_android</span>
+            <span class="contact-item"><b>GitHub:</b> https://github.com/006248bectf24-lang</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="section-title">About Me</div>
+        <p class="about-text">
+            Hello! I am Azeesha Naveed, a BS Computer Engineering Technology student at International Islamic University Islamabad. I am enthusiastic about technology and continuously improving my technical skills. I enjoy learning new concepts, solving problems, and working on practical projects.
+        </p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="education-card">
+            <div class="degree">BS Computer Engineering Technology</div>
+            <div class="institution">International Islamic University Islamabad (IIUI)</div>
+        </div>
+    </div>
+
+    <table class="grid-table">
+        <tr>
+            <td class="grid-cell">
+                <div class="section">
+                    <div class="section-title">Current Learning</div>
+                    <div class="pills">
+                        <span class="pill">Artificial Intelligence (AI)</span>
+                        <span class="pill">Git & GitHub</span>
+                        <span class="pill">Web Development</span>
+                    </div>
+                </div>
+            </td>
+            <td class="grid-cell">
+                <div class="section">
+                    <div class="section-title">Key Strengths</div>
+                    <ul class="strength-list">
+                        <li>Quick Learner</li>
+                        <li>Problem Solving</li>
+                        <li>Teamwork</li>
+                        <li>Time Management</li>
+                        <li>Communication Skills</li>
+                        <li>Willingness to Learn</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="section">
+        <div class="section-title">Career Objective</div>
+        <div class="objective-box">
+            My goal is to build a strong career in software and technology by gaining practical experience through internships and real-world projects. I am eager to learn from professionals and contribute with dedication.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
