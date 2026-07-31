@@ -1,315 +1,310 @@
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
-
 }
-
 
 
 body{
 
-    background:#f4f7fb;
+    font-family:Arial, sans-serif;
+    background:#fff8f0;
 
 }
-
 
 
 
 /* Header */
 
-.header{
+header{
 
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-
+    background:#8B0000;
     color:white;
-
     text-align:center;
-
-    padding:60px;
+    padding:25px;
 
 }
 
 
-
-.header h1{
-
-    font-size:40px;
-
-    font-weight:bold;
+header h1{
 
     text-transform:uppercase;
 
-    margin-bottom:20px;
+}
+
+
+header p{
+
+    text-transform:capitalize;
 
 }
 
 
 
-.header h2{
+/* Hero Background Image */
 
-    font-size:22px;
+.hero{
 
-}
+    height:500px;
 
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
 
+    background-size:cover;
 
-.header p{
-
-    font-size:18px;
-
-    margin-top:15px;
-
-}
-
-
-
-
-
-/* Sections */
-
-
-.about,
-.skills,
-.projects,
-.contact{
-
-
-    margin:30px;
-
-    padding:35px;
-
-    background:white;
-
-    border:2px solid #ddd;
-
-    border-radius:20px;
-
-
-}
-
-
-
-
-h2{
-
-    text-align:center;
-
-    text-transform:uppercase;
-
-    font-size:30px;
-
-    margin-bottom:25px;
-
-}
-
-
-
-
-.about p{
-
-    text-align:center;
-
-    font-size:18px;
-
-    line-height:1.7;
-
-}
-
-
-
-
-
-/* Cards */
-
-
-.skill-container,
-.project-container{
-
+    background-position:center;
 
     display:flex;
 
     justify-content:center;
 
-    gap:20px;
+    align-items:center;
 
-    flex-wrap:wrap;
-
+    text-align:center;
 
 }
 
+
+
+.hero-content{
+
+    color:white;
+
+}
+
+
+
+.hero h2{
+
+    font-size:45px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.hero p{
+
+    font-size:22px;
+
+    margin:20px;
+
+}
+
+
+
+.btn{
+
+    background:#ff5722;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+}
+
+
+
+.btn:hover{
+
+    background:#e64a19;
+
+}
+
+
+
+
+
+/* Menu */
+
+.menu{
+
+    padding:50px;
+
+    text-align:center;
+
+}
+
+
+
+.menu h2{
+
+    text-transform:uppercase;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.menu-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
 
 
 
 .card{
 
+    background:white;
 
     width:250px;
 
     padding:25px;
 
-    background:#eef2ff;
+    border-radius:20px;
 
-    border:2px solid #6366f1;
-
-    border-radius:15px;
-
-    text-align:center;
-
+    box-shadow:0 0 10px gray;
 
 }
-
 
 
 
 .card h3{
 
-    font-size:22px;
+    color:#8B0000;
 
-    margin-bottom:10px;
+    text-transform:capitalize;
+
+}
+
+
+
+.card p{
+
+    margin:15px;
 
 }
 
 
 
 
-.card:hover{
 
+/* About */
 
-    transform:translateY(-10px);
+.about{
 
-    background:#dbeafe;
+    padding:40px;
 
+    text-align:center;
 
 }
+
+
+
+.about h2{
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+/* Order */
+
+.order{
+
+    background:#ffe0b2;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+
+
+.order input{
+
+    padding:12px;
+
+    margin:10px;
+
+    border-radius:10px;
+
+    border:1px solid gray;
+
+}
+
+
+
+button{
+
+    background:green;
+
+    color:white;
+
+    padding:12px 30px;
+
+    border:none;
+
+    border-radius:25px;
+
+}
+
+
+
+button:hover{
+
+    background:darkgreen;
+
+}
+
 
 
 
 
 /* Contact */
 
+.contact{
 
-/* Contact Links */
+    padding:40px;
 
-.contact-box{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
-    flex-wrap:wrap;
+    text-align:center;
 
 }
 
 
 
-.contact-box a{
+.contact p{
 
-    text-decoration:none;
-
-    color:#111827;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    padding:15px 20px;
-
-    border-radius:15px;
-
-    border:2px solid #ddd;
-
-    background:white;
-
-    transition:0.3s;
+    margin:10px;
 
 }
 
 
-
-.contact-box i{
-
-    font-size:25px;
-
-    margin-right:8px;
-
-}
-
-
-/* Icon Colors */
-
-.fa-envelope{
-
-    color:#ea4335;
-
-}
-
-
-.fa-linkedin{
-
-    color:#0077b5;
-
-}
-
-
-.fa-github{
-
-    color:#000;
-
-}
-
-
-.fa-whatsapp{
-
-    color:#25D366;
-
-}
-
-
-
-/* Hover Effect */
-
-.contact-box a:hover{
-
-    transform:translateY(-8px);
-
-    background:#2563eb;
-
-    color:white;
-
-    border-color:#2563eb;
-
-}
-
-
-
-.contact-box a:hover i{
-
-    color:white;
-
-}
-
-
-
-
-
-/* Footer */
 
 
 footer{
 
-
-    background:#111827;
+    background:#222;
 
     color:white;
 
     text-align:center;
 
     padding:20px;
-
 
 }
